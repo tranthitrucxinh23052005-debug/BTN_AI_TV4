@@ -1,7 +1,10 @@
 # Báo cáo bàn giao — TV4 (Search Engineer)
+
 **Module:** `path_validator.py` + `baseline_solver.py`
 
+
 **Ngày:** 21/6
+
 
 **Deadline gốc:** 1/7 — đã xong sớm, sẵn sàng bàn giao cho TV3 và TV5
 
