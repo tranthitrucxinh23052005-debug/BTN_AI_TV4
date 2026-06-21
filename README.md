@@ -1,6 +1,8 @@
 # Báo cáo bàn giao — TV4 (Search Engineer)
 **Module:** `path_validator.py` + `baseline_solver.py`
+
 **Ngày:** 21/6
+
 **Deadline gốc:** 1/7 — đã xong sớm, sẵn sàng bàn giao cho TV3 và TV5
 
 ---
@@ -71,6 +73,7 @@ Theo yêu cầu "viết ít nhất 6 test case", đã bổ sung và tổ chức 
 | 8 | Giới hạn `max_turns=0` chặt, đường duy nhất cần rẽ | `None` (đúng vì vượt giới hạn) |
 
 Mỗi test còn được tự động kiểm chứng bằng hàm `_validate_path_shape()` — không chỉ kiểm tra có/không có đường, mà còn xác minh path trả về **thực sự đúng luật**: các bước liên tiếp phải kề nhau, số lần rẽ không vượt `max_turns`, mọi ô giữa đường đều đi được.
+<img width="407" height="419" alt="image" src="https://github.com/user-attachments/assets/119c2e49-e16e-42a0-882a-5c3f80e88960" />
 
 **Kết quả:** `8/8 PASS`.
 
@@ -87,6 +90,7 @@ Mỗi test còn được tự động kiểm chứng bằng hàm `_validate_path
 | P95 | 0.26 ms |
 | Tệ nhất | 0.45 ms |
 | **Mục tiêu** | < 50 ms |
+<img width="239" height="178" alt="image" src="https://github.com/user-attachments/assets/b14dcfae-8f1b-4fc6-a779-d2f94f183d20" />
 
 → **Đạt tiêu chí, nhanh hơn yêu cầu khoảng 100 lần.** Không cần nâng cấp lên A* ở giai đoạn này.
 
@@ -105,6 +109,10 @@ Mỗi test còn được tự động kiểm chứng bằng hàm `_validate_path
 - **`apply_move()` / `is_board_cleared()`**: helper phụ trợ.
 
 ### Kết quả kiểm thử
+<img width="289" height="221" alt="image" src="https://github.com/user-attachments/assets/a4e5b987-933e-4751-b8d8-431e70643616" />
+
+<img width="287" height="260" alt="image" src="https://github.com/user-attachments/assets/bf32098c-5df1-446e-bb47-3c504e1fdd88" />
+
 - Board test chuẩn 4×4: bế tắc sau 4 nước, còn lại đúng 1 ô — **đúng kỳ vọng**, vì ID `5` trong board này chỉ xuất hiện 1 lần (lẻ), không thể có cặp.
 - Board 6×4 đảm bảo có lời giải: **xoá sạch 100% (12/12 nước)**.
 - Stress test 20 ván ngẫu nhiên trên board 8×6 (đảm bảo có lời giải): **baseline tự xoá sạch 19/20 ván (95%)**.
